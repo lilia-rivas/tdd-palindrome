@@ -1,18 +1,36 @@
-Java Palindrome Validator (Aplicación TDD)
-Este repositorio contiene la solución implementada para determinar si una cadena de texto es un palíndromo (una frase que se lee igual de izquierda a derecha que de derecha a izquierda). El proyecto sigue la metodología de Desarrollo Guiado por Pruebas (TDD) como práctica de desarrollo.
+🔎 Palindrome Validator en Java
+Este proyecto es una implementación funcional de una clase para validar palíndromos, diseñada específicamente bajo la metodología Test Driven Development (TDD) como práctica de desarrollo profesional.
 
-🛠️ Tecnologías y Conceptos Clave
-El código fue diseñado para demostrar los siguientes conceptos de ingeniería de software:
+🎯 Objetivo del Proyecto
+El objetivo principal fue aplicar el ciclo de TDD (Red, Green, Refactor) para crear una función robusta en Java que determine si una palabra o frase se lee igual de izquierda a derecha que de derecha a izquierda.
 
-Test Driven Development (TDD): Se aplicó el ciclo completo Red → Green → Refactor, escribiendo primero los casos de prueba para impulsar la lógica del código.
+La función maneja las siguientes reglas de validación:
 
-JUnit 5: Utilizado como framework estándar para la ejecución y validación de las pruebas unitarias.
+✅ Ignora espacios ("Anita lava la tina").
 
-Programación Orientada a Objetos (POO): Diseño modular con la separación clara de responsabilidades entre la clase de producción (Palindrome) y la clase de prueba (PalindromeTest).
+✅ Ignora mayúsculas y minúsculas ("Oso" es igual a "oso").
 
-Manejo de Cadenas: La lógica del método isPalindrome gestiona la limpieza de la cadena (ignorando espacios, mayúsculas y minúsculas) antes de la verificación.
+🛠️ Stack y Metodología
+Componente	Uso
+Java	Lenguaje principal para la lógica de la función.
+JUnit 5	Framework de pruebas utilizado para escribir los casos de validación.
+TDD	Se aplicó el ciclo Red → Green → Refactor para guiar la implementación.
+Manejo de Cadenas	Se utilizan métodos de String y StringBuilder para limpiar e invertir la cadena de forma eficiente.
 
-📦 Estructura del Entregable
-Palindrome.java: Contiene el código fuente de la función public boolean isPalindrome(String text).
+📂 Estructura del Entregable
+El proyecto está dividido en dos clases que cumplen con los principios de POO (Separación de Responsabilidades):
 
-PalindromeTest.java: Contiene las pruebas unitarias que validan la funcionalidad y cumplen con el ciclo de TDD.
+1. Palindrome.java (El Código Fuente)
+Contiene el método public boolean isPalindrome(String text), que es el código de producción que contiene la lógica de limpieza y comparación.
+
+2. PalindromeTest.java (El Archivo de Pruebas)
+Contiene los métodos de prueba de JUnit, utilizando:
+
+@BeforeEach: Para asegurar que una nueva instancia de la clase Palindrome se cree antes de cada prueba.
+
+assertEquals: Para validar los casos de éxito (true) y los casos de falla (false).
+
+🧑‍💻 Instalación y Ejecución de Pruebas
+Para validar el código, simplemente ejecute la clase PalindromeTest con su plugin de JUnit dentro de su IDE (como Eclipse o IntelliJ).
+
+La ejecución de PalindromeTest debe mostrar que todos los casos de prueba son VERDES, confirmando que la función es robusta y cumple con los requisitos del TDD.
